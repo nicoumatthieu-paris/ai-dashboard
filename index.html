@@ -3,323 +3,680 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Daily Briefing — Beauty x Tech | Dior</title>
+<title>AI Strategic Monitor — Beauty x Tech</title>
 <meta name="color-scheme" content="light dark">
+
 <style>
+/* =========================================================
+   DESIGN SYSTEM — ULTRA PREMIUM EXECUTIVE
+========================================================= */
+
 :root{
-  --bg:#f6f6f4;
-  --card:#ffffff;
+  --bg:#f4f3f1;
+  --surface:#ffffff;
   --text:#111;
-  --muted:#6c6c6c;
+  --muted:#666;
+  --border:#e2e2e2;
   --accent:#C8A46A;
-  --border:#e5e5e5;
+  --danger:#C84C4C;
+  --success:#2E8B57;
 }
+
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0e0f11;
-    --card:#16181b;
-    --text:#f2f2f2;
-    --muted:#9da3aa;
-    --border:#2a2d31;
+    --bg:#0e1114;
+    --surface:#15181c;
+    --text:#f1f1f1;
+    --muted:#9ca3af;
+    --border:#2a2e33;
   }
 }
+
 [data-theme="dark"]{
-  --bg:#0e0f11;
-  --card:#16181b;
-  --text:#f2f2f2;
-  --muted:#9da3aa;
-  --border:#2a2d31;
+  --bg:#0e1114;
+  --surface:#15181c;
+  --text:#f1f1f1;
+  --muted:#9ca3af;
+  --border:#2a2e33;
 }
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
 }
+
 header{
   position:sticky;
   top:0;
-  z-index:100;
   background:var(--bg);
   border-bottom:1px solid var(--border);
-  padding:14px 20px;
+  padding:18px 24px;
+  z-index:1000;
 }
-.header-top{
+
+.header-grid{
   display:flex;
-  flex-wrap:wrap;
-  gap:12px;
   align-items:center;
+  flex-wrap:wrap;
+  gap:16px;
 }
-h1{font-size:20px;margin:0;font-weight:600}
-.subtitle{font-size:12px;color:var(--accent);letter-spacing:1px}
+
+.title{
+  font-size:20px;
+  font-weight:600;
+}
+
+.subtitle{
+  font-size:12px;
+  letter-spacing:1px;
+  color:var(--accent);
+}
+
 .controls{
   margin-left:auto;
   display:flex;
-  gap:8px;
   flex-wrap:wrap;
+  gap:8px;
 }
-input[type="search"]{
-  padding:6px 8px;
-  border:1px solid var(--border);
-  background:var(--card);
-  color:var(--text);
-}
-button{
+
+input, button{
   padding:6px 10px;
   border:1px solid var(--border);
-  background:var(--card);
-  cursor:pointer;
+  background:var(--surface);
   color:var(--text);
 }
-button:hover{border-color:var(--accent)}
+
+button:hover{border-color:var(--accent);cursor:pointer}
+
 .status-bar{
-  margin-top:6px;
+  margin-top:8px;
   font-size:12px;
   color:var(--muted);
 }
+
 main{
-  padding:20px;
-  max-width:1500px;
-  margin:auto;
+  max-width:1400px;
+  margin:40px auto;
+  padding:0 20px;
 }
-section{margin-bottom:40px}
+
+section{
+  margin-bottom:60px;
+}
+
 section h2{
   font-size:16px;
-  margin-bottom:14px;
   border-left:4px solid var(--accent);
-  padding-left:8px;
+  padding-left:10px;
+  margin-bottom:20px;
 }
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:16px;
+}
+
 .grid{
   display:grid;
-  gap:16px;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 }
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:12px;
-}
-.card h3{
-  font-size:14px;
-  margin:0 0 6px;
-}
-.card p{
-  font-size:13px;
-  margin:0 0 6px;
-  color:var(--muted);
-}
+
 .timeline-item{
-  border-left:2px solid var(--accent);
-  padding-left:8px;
-  margin-bottom:12px;
+  border-left:3px solid var(--accent);
+  padding-left:12px;
+  margin-bottom:14px;
 }
-.image{
-  width:100%;
-  height:130px;
-  background:linear-gradient(135deg,#ddd,#bbb);
-  margin-bottom:8px;
+
+.badge{
+  font-size:11px;
+  padding:2px 6px;
+  background:var(--accent);
+  margin-right:6px;
 }
-.actor-title{
-  font-weight:600;
-  margin-bottom:6px;
+
+.list-dense{
+  font-size:13px;
+  line-height:1.5;
 }
-.small{
-  font-size:12px;
-  color:var(--muted);
-}
+
 footer{
   text-align:center;
-  padding:20px;
   font-size:12px;
   color:var(--muted);
+  padding:40px 0;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="header-top">
+  <div class="header-grid">
     <div>
-      <h1>AI Daily Briefing</h1>
-      <div class="subtitle">Beauty x Tech | Dior</div>
+      <div class="title">AI Strategic Monitor</div>
+      <div class="subtitle">Beauty x Tech — Executive Intelligence</div>
     </div>
     <div class="controls">
-      <input type="search" id="searchInput" placeholder="Recherche...">
-      <button id="themeToggle">Thème</button>
-      <button id="refreshBtn">Refresh</button>
+      <input type="search" id="searchInput" placeholder="Recherche">
       <button id="sortBtn">Tri: Date</button>
+      <button id="refreshBtn">Refresh</button>
+      <button id="themeToggle">Thème</button>
+      <button id="exportBtn">Export</button>
+      <button id="importBtn">Import</button>
+      <input type="file" id="fileInput" hidden>
     </div>
   </div>
-  <div class="status-bar" id="statusBar">Initialisation...</div>
+  <div class="status-bar" id="statusBar"></div>
 </header>
 
 <main id="app"></main>
+<footer>Architecture Seed / Cache / Live — GitHub Pages Compatible</footer>
 
-<footer>
-Auto-refresh activé • Cache intelligent • GitHub Pages ready
-</footer>
-
-<script>
-/* ================================
-   CONFIGURATION SOURCES
-================================ */
-const SOURCES = [
-  {name:"OpenAI Blog", url:"https://openai.com/blog/rss", actor:"OpenAI", category:"gpt", tier:1},
-  {name:"Google AI Blog", url:"https://blog.google/technology/ai/rss/", actor:"Google", category:"gpt", tier:1},
-  {name:"Anthropic News", url:"https://www.anthropic.com/news/rss.xml", actor:"Anthropic", category:"gpt", tier:1},
-  {name:"TechCrunch AI", url:"https://techcrunch.com/tag/artificial-intelligence/feed/", actor:"Other", category:"general", tier:1},
-  {name:"The Verge AI", url:"https://www.theverge.com/ai-artificial-intelligence/rss/index.xml", actor:"Other", category:"general", tier:1}
-];
-
-let STATE = {
-  items:[],
-  filtered:[],
-  sortMode:"date"
-};
-
-/* ================================
-   UTILITIES
-================================ */
-function hash(str){
-  let h=0;
-  for(let i=0;i<str.length;i++){
-    h=(h<<5)-h+str.charCodeAt(i);
-    h|=0;
-  }
-  return Math.abs(h).toString();
-}
-function score(item){
-  let s=50;
-  const text=(item.title+" "+item.summary).toLowerCase();
-  if(/launch|release|api|model/.test(text)) s+=20;
-  if(/openai|google|anthropic|mistral/.test(text)) s+=15;
-  const ageHours=(Date.now()-new Date(item.date))/3600000;
-  if(ageHours<72) s+=15;
-  return Math.min(s,100);
-}
-function dedupe(items){
-  const seen=new Map();
-  items.forEach(i=>{
-    const key=i.url || i.title;
-    if(!seen.has(key)) seen.set(key,i);
-  });
-  return Array.from(seen.values());
-}
-
-/* ================================
-   FETCH RSS
-================================ */
-async function fetchRSS(source){
-  try{
-    const res=await fetch(source.url);
-    const text=await res.text();
-    const parser=new DOMParser();
-    const xml=parser.parseFromString(text,"text/xml");
-    const entries=[...xml.querySelectorAll("item, entry")];
-    return entries.map(e=>{
-      const title=e.querySelector("title")?.textContent || "";
-      const link=e.querySelector("link")?.textContent || e.querySelector("link")?.getAttribute("href") || "";
-      const date=e.querySelector("pubDate, updated, published")?.textContent || new Date().toISOString();
-      const summary=e.querySelector("description, summary")?.textContent || "";
-      return {
-        id:hash(link+title+date),
-        title,
-        url:link,
-        summary:summary.replace(/<[^>]+>/g,"").slice(0,200),
-        date,
-        actor:source.actor,
-        category:source.category,
-        source:source.name
-      };
-    });
-  }catch(err){
-    console.warn("Erreur source:",source.name);
-    return [];
-  }
-}
-
-/* ================================
-   LOAD ALL SOURCES
-================================ */
-async function loadAll(){
-  document.getElementById("statusBar").textContent="Mise à jour...";
-  const results=await Promise.all(SOURCES.map(fetchRSS));
-  const flat=results.flat();
-  STATE.items=dedupe(flat).map(i=>({...i, importance:score(i)}));
-  localStorage.setItem("ai_cache",JSON.stringify(STATE.items));
-  document.getElementById("statusBar").textContent="Dernière mise à jour : "+new Date().toLocaleString();
-  render();
-}
-
-/* ================================
-   RENDER
-================================ */
-function render(){
-  const app=document.getElementById("app");
-  app.innerHTML="";
-  let items=[...STATE.items];
-  if(STATE.sortMode==="date"){
-    items.sort((a,b)=>new Date(b.date)-new Date(a.date));
-  }else{
-    items.sort((a,b)=>b.importance-a.importance);
-  }
-  STATE.filtered=items;
-
-  app.appendChild(renderSection("Synthèse GPT (7 jours)","gpt",true));
-  app.appendChild(renderSection("General AI News","general",false,true));
-}
-function renderSection(title,category,timeline=false,images=false){
-  const section=document.createElement("section");
-  section.innerHTML="<h2>"+title+"</h2>";
-  const container=document.createElement("div");
-  container.className=timeline?"":"grid";
-  const weekAgo=Date.now()-7*24*60*60*1000;
-  const items=STATE.filtered.filter(i=>i.category===category && new Date(i.date)>weekAgo);
-  items.slice(0,12).forEach(i=>{
-    if(timeline){
-      const div=document.createElement("div");
-      div.className="timeline-item";
-      div.innerHTML="<strong>"+i.title+"</strong><div class='small'>"+i.source+" — "+new Date(i.date).toLocaleDateString()+"</div>";
-      container.appendChild(div);
-    }else{
-      const card=document.createElement("div");
-      card.className="card";
-      let img=images?"<div class='image'></div>":"";
-      card.innerHTML=img+"<h3>"+i.title+"</h3><p>"+i.summary+"</p><div class='small'>"+i.source+"</div>";
-      container.appendChild(card);
+<!-- =========================================================
+   SEED DATA — NIVEAU A
+========================================================= -->
+<script type="application/json" id="seed-data">
+{
+  "version":"2.0",
+  "ui_config":{
+    "limits":{
+      "gpt":25,
+      "general":15,
+      "commerce":12,
+      "geo":12,
+      "media":12,
+      "beauty":12
     }
-  });
-  section.appendChild(container);
-  return section;
+  },
+  "sources":[
+    {
+      "name":"OpenAI Blog",
+      "type":"rss",
+      "url":"https://openai.com/blog/rss",
+      "category_hint":"gpt",
+      "actor_hint":"OpenAI",
+      "tier":1,
+      "enabled":true
+    },
+    {
+      "name":"Google AI Blog",
+      "type":"rss",
+      "url":"https://blog.google/technology/ai/rss/",
+      "category_hint":"gpt",
+      "actor_hint":"Google",
+      "tier":1,
+      "enabled":true
+    },
+    {
+      "name":"Anthropic News",
+      "type":"rss",
+      "url":"https://www.anthropic.com/news/rss.xml",
+      "category_hint":"gpt",
+      "actor_hint":"Anthropic",
+      "tier":1,
+      "enabled":true
+    },
+    {
+      "name":"TechCrunch AI",
+      "type":"rss",
+      "url":"https://techcrunch.com/tag/artificial-intelligence/feed/",
+      "category_hint":"general",
+      "actor_hint":"Other",
+      "tier":1,
+      "enabled":true
+    }
+  ],
+  "taxonomy":{
+    "actors":{
+      "OpenAI":["openai","gpt"],
+      "Google":["google","gemini"],
+      "Anthropic":["anthropic","claude"],
+      "Mistral":["mistral"]
+    },
+    "categories":{
+      "commerce":["commerce","retail","shopping","ads"],
+      "geo":["regulation","eu","search","seo","law"],
+      "media":["publisher","media","creator"],
+      "beauty":["beauty","cosmetics","lvmh","sephora"],
+      "china":["china","beijing","shanghai"]
+    }
+  },
+  "manual_items":[]
 }
-
-/* ================================
-   EVENTS
-================================ */
-document.getElementById("refreshBtn").addEventListener("click",loadAll);
-document.getElementById("sortBtn").addEventListener("click",()=>{
-  STATE.sortMode=STATE.sortMode==="date"?"importance":"date";
-  document.getElementById("sortBtn").textContent="Tri: "+(STATE.sortMode==="date"?"Date":"Importance");
-  render();
-});
-document.getElementById("themeToggle").addEventListener("click",()=>{
-  const cur=document.documentElement.getAttribute("data-theme");
-  document.documentElement.setAttribute("data-theme",cur==="dark"?"light":"dark");
-});
-
-/* ================================
-   INIT
-================================ */
-window.addEventListener("load",()=>{
-  const cache=localStorage.getItem("ai_cache");
-  if(cache){
-    STATE.items=JSON.parse(cache);
-    render();
-  }
-  loadAll();
-});
 </script>
 
-</body>
-</html>
+<script>
+
+/* =========================================================
+
+<script>
+/* =========================================================
+   PART 2 / 3 — LOGIQUE ULTRA-PREMIUM
+========================================================= */
+
+/* ================================
+LOADERS & CACHE
+=============================== */
+function loadSeedData() {
+  STATE.seed = JSON.parse(document.getElementById("seed-data").textContent);
+}
+function loadCache() {
+  const c = localStorage.getItem("ai_cache");
+  if (c) STATE.cache = JSON.parse(c);
+  else STATE.cache = {items:[], fetched_at:null, source_status:{}};
+}
+function saveCache() {
+  localStorage.setItem("ai_cache", JSON.stringify({
+    items: STATE.items,
+    fetched_at: new Date().toISOString(),
+    source_status: STATE.cache.source_status
+  }));
+}
+
+/* ================================
+FETCH LIVE
+=============================== */
+async function fetchAllSources() {
+  const sources = STATE.seed.sources.filter(s => s.enabled);
+  let results = [];
+  for (const s of sources) {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
+      const res = await fetch(s.url, {signal: controller.signal});
+      clearTimeout(timeout);
+      const text = await res.text();
+      let items = [];
+      if (s.type === "rss") items = parseRSS(text, s);
+      else if (s.type === "atom") items = parseAtom(text, s);
+      else if (s.type === "json") items = parseJSON(text, s);
+      results.push(...items);
+      STATE.cache.source_status[s.name] = "OK";
+    } catch (e) {
+      console.warn("Source fail:", s.name, e);
+      STATE.cache.source_status[s.name] = "FAIL";
+    }
+  }
+  return results;
+}
+
+function parseRSS(xmlText, meta) {
+  const xml = new DOMParser().parseFromString(xmlText, "text/xml");
+  const items = [...xml.querySelectorAll("item")];
+  return items.map(i => normalizeItem({
+    title: i.querySelector("title")?.textContent,
+    summary: i.querySelector("description")?.textContent,
+    date_published: i.querySelector("pubDate")?.textContent,
+    url: i.querySelector("link")?.textContent
+  }, meta));
+}
+function parseAtom(xmlText, meta) {
+  const xml = new DOMParser().parseFromString(xmlText, "text/xml");
+  const items = [...xml.querySelectorAll("entry")];
+  return items.map(i => normalizeItem({
+    title: i.querySelector("title")?.textContent,
+    summary: i.querySelector("summary")?.textContent || i.querySelector("content")?.textContent,
+    date_published: i.querySelector("updated")?.textContent,
+    url: i.querySelector("link")?.getAttribute("href")
+  }, meta));
+}
+function parseJSON(jsonText, meta) {
+  const data = JSON.parse(jsonText);
+  if (!Array.isArray(data)) return [];
+  return data.map(i => normalizeItem({
+    title: i.title,
+    summary: i.summary,
+    date_published: i.date,
+    url: i.url
+  }, meta));
+}
+
+/* ================================
+NORMALIZE & SCORING
+=============================== */
+function normalizeItem(raw, meta) {
+  const id = btoa((raw.url || "") + raw.title + (raw.date_published || "")).slice(0, 24);
+  const item = {
+    id,
+    title: raw.title || "",
+    summary: (raw.summary || "").replace(/<[^>]+>/g, "").slice(0, 250),
+    content: "",
+    date_published: new Date(raw.date_published || Date.now()).toISOString(),
+    source_name: meta.name,
+    source_url: meta.url,
+    url: raw.url || "#",
+    actor: meta.actor_hint || "Other",
+    category: meta.category_hint || "general",
+    tags: [],
+    importance: 0,
+    image: null
+  };
+  item.importance = scoreItem(item, meta);
+  item.category = categorizeItem(item, STATE.seed.taxonomy);
+  return item;
+}
+
+function dedupeItems(items) {
+  const map = new Map();
+  items.forEach(i => {
+    const key = i.url || i.title.toLowerCase();
+    if (!map.has(key)) map.set(key, i);
+  });
+  return Array.from(map.values());
+}
+
+function scoreItem(item, meta) {
+  let score = 50;
+  const txt = (item.title + " " + item.summary).toLowerCase();
+  if (/launch|release|api|model|partnership/.test(txt)) score += 20;
+  if (/openai|google|anthropic|mistral/.test(txt)) score += 15;
+  if (meta.tier === 1) score += 10;
+  return Math.min(score, 100);
+}
+
+function categorizeItem(item, taxonomy) {
+  for (const [cat, keywords] of Object.entries(taxonomy.categories)) {
+    for (const kw of keywords) {
+      if ((item.title + item.summary).toLowerCase().includes(kw)) {
+        item.category = cat;
+        return cat;
+      }
+    }
+  }
+  for (const [actor, keywords] of Object.entries(taxonomy.actors)) {
+    for (const kw of keywords) {
+      if ((item.title + item.summary).toLowerCase().includes(kw)) {
+        item.actor = actor;
+      }
+    }
+  }
+  return item.category;
+}
+
+/* ================================
+FILTERS & SORT
+=============================== */
+function applyFiltersAndSort() {
+  let items = [...STATE.items];
+  const q = document.getElementById("searchInput").value.toLowerCase();
+  if (q) items = items.filter(i => (i.title + i.summary + i.actor).toLowerCase().includes(q));
+  if (STATE.sort === "date") items.sort((a,b) => new Date(b.date_published) - new Date(a.date_published));
+  else items.sort((a,b) => b.importance - a.importance);
+  STATE.filtered = items;
+}
+
+/* ================================
+IMPORT & EXPORT
+=============================== */
+function exportJSON() {
+  const blob = new Blob([JSON.stringify(STATE.items,null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "ai_dashboard_export.json";
+  a.click();
+}
+function importJSON(file) {
+  const reader = new FileReader();
+  reader.onload = e => {
+    const data = JSON.parse(e.target.result);
+    STATE.items = dedupeItems(data);
+    saveCache();
+    renderApp();
+  };
+  reader.readAsText(file);
+}
+
+/* ================================
+USER INTERACTIONS
+=============================== */
+document.getElementById("refreshBtn").onclick = async () => {
+  const live = await fetchAllSources();
+  STATE.items = dedupeItems([...STATE.seed.manual_items, ...live]);
+  saveCache();
+  renderApp();
+};
+document.getElementById("sortBtn").onclick = () => {
+  STATE.sort = STATE.sort === "date" ? "importance" : "date";
+  renderApp();
+};
+document.getElementById("themeToggle").onclick = () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  document.documentElement.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+};
+document.getElementById("exportBtn").onclick = exportJSON;
+document.getElementById("importBtn").onclick = () => document.getElementById("fileInput").click();
+document.getElementById("fileInput").onchange = e => {
+  if (e.target.files[0]) importJSON(e.target.files[0]);
+};
+document.getElementById("searchInput").oninput = renderApp;
+
+</script>
+
+<script>
+/* =========================================================
+   PART 3 / 3 — RENDU ULTRA-PREMIUM 7 SECTIONS
+========================================================= */
+
+function renderApp() {
+  applyFiltersAndSort();
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  // 1️⃣ Synthèse GPT — “en un trou” factuelle
+  app.appendChild(renderSectionGPT());
+
+  // 2️⃣ Commerce
+  app.appendChild(renderSectionCommerce());
+
+  // 3️⃣ GEO
+  app.appendChild(renderSectionGeo());
+
+  // 4️⃣ Media
+  app.appendChild(renderSectionMedia());
+
+  // 5️⃣ Beauty Watch
+  app.appendChild(renderSectionBeauty());
+
+  // 6️⃣ China Focus
+  app.appendChild(renderSectionChina());
+
+  // 7️⃣ Grandes annonces IA
+  app.appendChild(renderSectionGeneral());
+
+  // Mise à jour barre de statut
+  const sb = document.getElementById("statusBar");
+  sb.textContent = "Dernière mise à jour : " + (STATE.cache.fetched_at ? new Date(STATE.cache.fetched_at).toLocaleString() : "Seed");
+  sb.innerHTML += " | Sources : " + Object.entries(STATE.cache.source_status || {}).map(([k,v]) => `${k}: ${v}`).join(" | ");
+}
+
+/* ================================
+SECTION 1 — GPT synthèse factuelle
+=============================== */
+function renderSectionGPT() {
+  const sec = document.createElement("section");
+  sec.innerHTML = "<h2>Synthèse GPT (7 jours)</h2>";
+
+  // Filtrer les 7 derniers jours
+  const week = Date.now() - 7*86400000;
+  const gptItems = STATE.filtered.filter(i => i.category==="gpt" && new Date(i.date_published) > week);
+
+  // Générer synthèse factuelle “en un trou”
+  const summary = document.createElement("div");
+  summary.className = "card";
+  if(gptItems.length === 0){
+    summary.textContent = "Aucune information GPT récente disponible.";
+  } else {
+    summary.innerHTML = gptItems.map(i =>
+      `<strong>${i.title}</strong> — ${i.actor}, ${new Date(i.date_published).toLocaleDateString()}`
+    ).join("<br>");
+  }
+  sec.appendChild(summary);
+  return sec;
+}
+
+/* ================================
+SECTION 2 — Commerce
+=============================== */
+function renderSectionCommerce() {
+  const sec = document.createElement("section");
+  sec.innerHTML = "<h2>Commerce — Situation à date</h2>";
+  const grid = document.createElement("div");
+  grid.className = "grid";
+
+  const commerceItems = STATE.filtered.filter(i=>i.category==="commerce");
+  const actors = [...new Set(commerceItems.map(i=>i.actor))];
+
+  actors.forEach(actor=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<h3>${actor}</h3>`;
+    // Situation à date factuelle
+    const summary = commerceItems.filter(i=>i.actor===actor)
+      .map(i=>`- ${i.title} (${new Date(i.date_published).toLocaleDateString()})`).join("<br>");
+    card.innerHTML += `<div class="list-dense">${summary || "Aucune info"}</div>`;
+    grid.appendChild(card);
+  });
+
+  sec.appendChild(grid);
+  return sec;
+}
+
+/* ================================
+SECTION 3 — GEO
+=============================== */
+function renderSectionGeo() {
+  const sec = document.createElement("section");
+  sec.innerHTML = "<h2>GEO / Régulation / Search</h2>";
+  const grid = document.createElement("div");
+  grid.className = "grid";
+
+  const geoItems = STATE.filtered.filter(i=>i.category==="geo");
+  const actors = [...new Set(geoItems.map(i=>i.actor))];
+
+  actors.forEach(actor=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<h3>${actor}</h3>`;
+    const summary = geoItems.filter(i=>i.actor===actor)
+      .map(i=>`- ${i.title} (${new Date(i.date_published).toLocaleDateString()})`).join("<br>");
+    card.innerHTML += `<div class="list-dense">${summary || "Aucune info"}</div>`;
+    grid.appendChild(card);
+  });
+
+  sec.appendChild(grid);
+  return sec;
+}
+
+/* ================================
+SECTION 4 — Media
+=============================== */
+function renderSectionMedia() {
+  const sec = document.createElement("section");
+  sec.innerHTML = "<h2>Media / Publisher / Ads</h2>";
+  const grid = document.createElement("div");
+  grid.className = "grid";
+
+  const mediaItems = STATE.filtered.filter(i=>i.category==="media");
+  mediaItems.forEach(i=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<h3>${i.actor}</h3><strong>${i.title}</strong><br>${i.summary}`;
+    grid.appendChild(card);
+  });
+
+  sec.appendChild(grid);
+  return sec;
+}
+
+/* ================================
+SECTION 5 — Beauty Watch
+=============================== */
+function renderSectionBeauty() {
+  const sec = document.createElement("section");
+  sec.innerHTML = "<h2>Beauty Watch (90 jours)</h2>";
+  const grid = document.createElement("div");
+  grid.className = "grid";
+
+  const beautyItems = STATE.filtered.filter(i=>i.category==="beauty");
+  beautyItems.forEach(i=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<strong>${i.title}</strong><br>${i.actor}<br>${i.summary}`;
+    grid.appendChild(card);
+  });
+
+  sec.appendChild(grid);
+  return sec;
+}
+
+/* ================================
+SECTION 6 — China Focus
+=============================== */
+function renderSectionChina() {
+  const sec = document.createElement("section");
+  sec.innerHTML = "<h2>China Focus</h2>";
+  const grid = document.createElement("div");
+  grid.className = "grid";
+
+  const chinaItems = STATE.filtered.filter(i=>i.category==="china");
+  chinaItems.forEach(i=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<strong>${i.title}</strong><br>${i.actor}<br>${i.summary}`;
+    grid.appendChild(card);
+  });
+
+  sec.appendChild(grid);
+  return sec;
+}
+
+/* ================================
+SECTION 7 — Grandes annonces IA
+=============================== */
+function renderSectionGeneral() {
+  const sec = document.createElement("section");
+  sec.innerHTML = "<h2>Grandes annonces IA</h2>";
+  const grid = document.createElement("div");
+  grid.className = "grid";
+
+  const generalItems = STATE.filtered.filter(i=>i.category==="general")
+    .slice(0, STATE.seed.ui_config.limits.general);
+  generalItems.forEach(i=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<div class="image"></div><strong>${i.title}</strong><br>${i.summary}`;
+    grid.appendChild(card);
+  });
+
+  sec.appendChild(grid);
+  return sec;
+}
+
+/* ================================
+INITIALIZATION
+=============================== */
+window.addEventListener("load", async () => {
+  loadSeedData();
+  loadCache();
+  // Démarrage avec manual_items
+  STATE.items = STATE.seed.manual_items.slice();
+  renderApp();
+
+  // Tentative live fetch
+  try {
+    const live = await fetchAllSources();
+    STATE.items = dedupeItems([...STATE.seed.manual_items, ...live]);
+    saveCache();
+    renderApp();
+  } catch(e){
+    document.getElementById("statusBar").textContent = "Live fetch indisponible — affichage cache/seed";
+    console.warn(e);
+  }
+});
+</script>
