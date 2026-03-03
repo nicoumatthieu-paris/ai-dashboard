@@ -2,155 +2,150 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<http-equiv="refresh">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Strategic Monitor — Beauty x Tech</title>
 <meta name="color-scheme" content="light dark">
 
 <style>
-/* =========================================================
-   DESIGN SYSTEM — ULTRA PREMIUM EXECUTIVE
-========================================================= */
-
-:root{
-  --bg:#f4f3f1;
-  --surface:#ffffff;
-  --text:#111;
-  --muted:#666;
-  --border:#e2e2e2;
-  --accent:#C8A46A;
-  --danger:#C84C4C;
-  --success:#2E8B57;
+/* Design System */
+:root {
+  --bg: #f4f3f1;
+  --surface: #ffffff;
+  --text: #111;
+  --muted: #666;
+  --border: #e2e2e2;
+  --accent: #C8A46A;
+  --danger: #C84C4C;
+  --success: #2E8B57;
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0e1114;
-    --surface:#15181c;
-    --text:#f1f1f1;
-    --muted:#9ca3af;
-    --border:#2a2e33;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1114;
+    --surface: #15181c;
+    --text: #f1f1f1;
+    --muted: #9ca3af;
+    --border: #2a2e33;
   }
 }
 
-[data-theme="dark"]{
-  --bg:#0e1114;
-  --surface:#15181c;
-  --text:#f1f1f1;
-  --muted:#9ca3af;
-  --border:#2a2e33;
+[data-theme="dark"] {
+  --bg: #0e1114;
+  --surface: #15181c;
+  --text: #f1f1f1;
+  --muted: #9ca3af;
+  --border: #2a2e33;
 }
 
-*{box-sizing:border-box}
+* { box-sizing: border-box; }
 
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-header{
-  position:sticky;
-  top:0;
-  background:var(--bg);
-  border-bottom:1px solid var(--border);
-  padding:18px 24px;
-  z-index:1000;
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+  z-index: 1000;
 }
 
-.header-grid{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:16px;
+.header-grid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.title{
-  font-size:20px;
-  font-weight:600;
+.title {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.subtitle{
-  font-size:12px;
-  letter-spacing:1px;
-  color:var(--accent);
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--accent);
 }
 
-.controls{
-  margin-left:auto;
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
+.controls {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-input, button{
-  padding:6px 10px;
-  border:1px solid var(--border);
-  background:var(--surface);
-  color:var(--text);
+input, button {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 4px;
 }
 
-button:hover{border-color:var(--accent);cursor:pointer}
-
-.status-bar{
-  margin-top:8px;
-  font-size:12px;
-  color:var(--muted);
+button:hover {
+  border-color: var(--accent);
+  cursor: pointer;
 }
 
-main{
-  max-width:1400px;
-  margin:40px auto;
-  padding:0 20px;
+.status-bar {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
 }
 
-section{
-  margin-bottom:60px;
+main {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-section h2{
-  font-size:16px;
-  border-left:4px solid var(--accent);
-  padding-left:10px;
-  margin-bottom:20px;
+section {
+  margin-bottom: 60px;
 }
 
-.card{
-  background:var(--surface);
-  border:1px solid var(--border);
-  padding:16px;
+section h2 {
+  font-size: 16px;
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+  margin-bottom: 20px;
 }
 
-.grid{
-  display:grid;
-  gap:20px;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
-.timeline-item{
-  border-left:3px solid var(--accent);
-  padding-left:12px;
-  margin-bottom:14px;
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.badge{
-  font-size:11px;
-  padding:2px 6px;
-  background:var(--accent);
-  margin-right:6px;
+.list-dense {
+  font-size: 13px;
+  line-height: 1.8;
 }
 
-.list-dense{
-  font-size:13px;
-  line-height:1.5;
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 40px 0;
 }
 
-footer{
-  text-align:center;
-  font-size:12px;
-  color:var(--muted);
-  padding:40px 0;
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
 }
 </style>
 </head>
@@ -170,202 +165,238 @@ footer{
       <button id="themeToggle">Thème</button>
       <button id="exportBtn">Export</button>
       <button id="importBtn">Import</button>
-      <input type="file" id="fileInput" hidden>
+      <input type="file" id="fileInput" hidden accept=".json">
     </div>
   </div>
-  <div class="status-bar" id="statusBar"></div>
+  <div class="status-bar" id="statusBar">Chargement...</div>
 </header>
 
-<main id="app"></main>
+<main id="app"><div class="loading">⏳ Chargement des données...</div></main>
 <footer>Architecture Seed / Cache / Live — GitHub Pages Compatible</footer>
 
-<!-- =========================================================
-   SEED DATA — NIVEAU A
-========================================================= -->
 <script type="application/json" id="seed-data">
 {
-  "version":"2.0",
-  "ui_config":{
-    "limits":{
-      "gpt":25,
-      "general":15,
-      "commerce":12,
-      "geo":12,
-      "media":12,
-      "beauty":12
+  "version": "2.0",
+  "ui_config": {
+    "proxy_url": "https://api.allorigins.win/raw?url=",
+    "limits": {
+      "gpt": 25,
+      "general": 15,
+      "commerce": 12,
+      "geo": 12,
+      "media": 12,
+      "beauty": 12
     }
   },
-  "sources":[
+  "sources": [
     {
-      "name":"OpenAI Blog",
-      "type":"rss",
-      "url":"https://openai.com/blog/rss",
-      "category_hint":"gpt",
-      "actor_hint":"OpenAI",
-      "tier":1,
-      "enabled":true
+      "name": "OpenAI Blog",
+      "type": "rss",
+      "url": "https://openai.com/blog/rss",
+      "category_hint": "gpt",
+      "actor_hint": "OpenAI",
+      "tier": 1,
+      "enabled": true
     },
     {
-      "name":"Google AI Blog",
-      "type":"rss",
-      "url":"https://blog.google/technology/ai/rss/",
-      "category_hint":"gpt",
-      "actor_hint":"Google",
-      "tier":1,
-      "enabled":true
+      "name": "Google AI Blog",
+      "type": "rss",
+      "url": "https://blog.google/technology/ai/rss/",
+      "category_hint": "gpt",
+      "actor_hint": "Google",
+      "tier": 1,
+      "enabled": true
     },
     {
-      "name":"Anthropic News",
-      "type":"rss",
-      "url":"https://www.anthropic.com/news/rss.xml",
-      "category_hint":"gpt",
-      "actor_hint":"Anthropic",
-      "tier":1,
-      "enabled":true
+      "name": "Anthropic News",
+      "type": "rss",
+      "url": "https://www.anthropic.com/news/rss.xml",
+      "category_hint": "gpt",
+      "actor_hint": "Anthropic",
+      "tier": 1,
+      "enabled": true
     },
     {
-      "name":"TechCrunch AI",
-      "type":"rss",
-      "url":"https://techcrunch.com/tag/artificial-intelligence/feed/",
-      "category_hint":"general",
-      "actor_hint":"Other",
-      "tier":1,
-      "enabled":true
+      "name": "TechCrunch AI",
+      "type": "rss",
+      "url": "https://techcrunch.com/tag/artificial-intelligence/feed/",
+      "category_hint": "general",
+      "actor_hint": "Other",
+      "tier": 1,
+      "enabled": true
     }
   ],
-  "taxonomy":{
-    "actors":{
-      "OpenAI":["openai","gpt"],
-      "Google":["google","gemini"],
-      "Anthropic":["anthropic","claude"],
-      "Mistral":["mistral"]
+  "taxonomy": {
+    "actors": {
+      "OpenAI": ["openai", "gpt", "chatgpt"],
+      "Google": ["google", "gemini", "bard"],
+      "Anthropic": ["anthropic", "claude"],
+      "Mistral": ["mistral"],
+      "Meta": ["meta", "llama"],
+      "Microsoft": ["microsoft", "copilot"]
     },
-   "ui_config": {
-     "proxy_url": "https://r.jina.ai/http://",
-     "order_sections": ["gpt","commerce","geo","media","beauty","china","general"],
-     "limits": {"general":12}
-}
-   
-    "categories":{
-      "commerce":["commerce","retail","shopping","ads"],
-      "geo":["regulation","eu","search","seo","law"],
-      "media":["publisher","media","creator"],
-      "beauty":["beauty","cosmetics","lvmh","sephora"],
-      "china":["china","beijing","shanghai"]
+    "categories": {
+      "gpt": ["gpt", "llm", "model", "api"],
+      "commerce": ["commerce", "retail", "shopping", "ads", "advertising"],
+      "geo": ["regulation", "eu", "search", "seo", "law", "gdpr"],
+      "media": ["publisher", "media", "creator", "content"],
+      "beauty": ["beauty", "cosmetics", "lvmh", "sephora", "makeup"],
+      "china": ["china", "beijing", "shanghai", "baidu"]
     }
   },
-  "manual_items":[]
+  "manual_items": []
 }
 </script>
 
 <script>
+// ========================================
+// STATE INITIALIZATION
+// ========================================
+const STATE = {
+  seed: null,
+  cache: { items: [], fetched_at: null, source_status: {} },
+  items: [],
+  filtered: [],
+  sort: "date"
+};
 
-/* =========================================================
-
-<script>
-/* =========================================================
-   PART 2 / 3 — LOGIQUE ULTRA-PREMIUM
-========================================================= */
-
-/* ================================
-LOADERS & CACHE
-=============================== */
+// ========================================
+// LOADERS & CACHE
+// ========================================
 function loadSeedData() {
-  STATE.seed = JSON.parse(document.getElementById("seed-data").textContent);
-}
-function loadCache() {
-  const c = localStorage.getItem("ai_cache");
-  if (c) STATE.cache = JSON.parse(c);
-  else STATE.cache = {items:[], fetched_at:null, source_status:{}};
-}
-function saveCache() {
-  localStorage.setItem("ai_cache", JSON.stringify({
-    items: STATE.items,
-    fetched_at: new Date().toISOString(),
-    source_status: STATE.cache.source_status
-  }));
+  try {
+    STATE.seed = JSON.parse(document.getElementById("seed-data").textContent);
+  } catch(e) {
+    console.error("Erreur chargement seed:", e);
+    STATE.seed = { sources: [], taxonomy: {}, manual_items: [], ui_config: { limits: {} } };
+  }
 }
 
-/* ================================
-FETCH LIVE
-=============================== */
+function loadCache() {
+  try {
+    const c = localStorage.getItem("ai_cache");
+    if (c) {
+      STATE.cache = JSON.parse(c);
+      STATE.items = STATE.cache.items || [];
+    }
+  } catch(e) {
+    console.warn("Cache invalide:", e);
+  }
+}
+
+function saveCache() {
+  try {
+    localStorage.setItem("ai_cache", JSON.stringify({
+      items: STATE.items,
+      fetched_at: new Date().toISOString(),
+      source_status: STATE.cache.source_status
+    }));
+  } catch(e) {
+    console.error("Erreur sauvegarde cache:", e);
+  }
+}
+
+// ========================================
+// FETCH LIVE avec CORS Proxy
+// ========================================
 async function fetchAllSources() {
   const sources = STATE.seed.sources.filter(s => s.enabled);
+  const proxy = STATE.seed.ui_config.proxy_url;
   let results = [];
+  
   for (const s of sources) {
     try {
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 8000);
-      const res = await fetch(s.url, {signal: controller.signal});
+      const timeout = setTimeout(() => controller.abort(), 10000);
+      
+      // Utilisation du proxy CORS
+      const url = proxy + encodeURIComponent(s.url);
+      const res = await fetch(url, { signal: controller.signal });
       clearTimeout(timeout);
+      
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      
       const text = await res.text();
       let items = [];
-      if (s.type === "rss") items = parseRSS(text, s);
-      else if (s.type === "atom") items = parseAtom(text, s);
-      else if (s.type === "json") items = parseJSON(text, s);
+      
+      if (s.type === "rss" || s.type === "atom") {
+        items = parseRSS(text, s);
+      } else if (s.type === "json") {
+        items = parseJSON(text, s);
+      }
+      
       results.push(...items);
-      STATE.cache.source_status[s.name] = "OK";
+      STATE.cache.source_status[s.name] = "✓ OK";
+      console.log(`✓ ${s.name}: ${items.length} items`);
     } catch (e) {
-      console.warn("Source fail:", s.name, e);
-      STATE.cache.source_status[s.name] = "FAIL";
+      console.warn(`✗ ${s.name}:`, e.message);
+      STATE.cache.source_status[s.name] = "✗ FAIL";
     }
   }
+  
   return results;
 }
 
+// ========================================
+// PARSERS
+// ========================================
 function parseRSS(xmlText, meta) {
-  const xml = new DOMParser().parseFromString(xmlText, "text/xml");
-  const items = [...xml.querySelectorAll("item")];
-  return items.map(i => normalizeItem({
-    title: i.querySelector("title")?.textContent,
-    summary: i.querySelector("description")?.textContent,
-    date_published: i.querySelector("pubDate")?.textContent,
-    url: i.querySelector("link")?.textContent
-  }, meta));
-}
-function parseAtom(xmlText, meta) {
-  const xml = new DOMParser().parseFromString(xmlText, "text/xml");
-  const items = [...xml.querySelectorAll("entry")];
-  return items.map(i => normalizeItem({
-    title: i.querySelector("title")?.textContent,
-    summary: i.querySelector("summary")?.textContent || i.querySelector("content")?.textContent,
-    date_published: i.querySelector("updated")?.textContent,
-    url: i.querySelector("link")?.getAttribute("href")
-  }, meta));
-}
-function parseJSON(jsonText, meta) {
-  const data = JSON.parse(jsonText);
-  if (!Array.isArray(data)) return [];
-  return data.map(i => normalizeItem({
-    title: i.title,
-    summary: i.summary,
-    date_published: i.date,
-    url: i.url
-  }, meta));
+  try {
+    const xml = new DOMParser().parseFromString(xmlText, "text/xml");
+    const items = [...xml.querySelectorAll("item, entry")];
+    
+    return items.map(i => {
+      const title = i.querySelector("title")?.textContent || "";
+      const description = i.querySelector("description, summary, content")?.textContent || "";
+      const pubDate = i.querySelector("pubDate, published, updated")?.textContent || "";
+      const link = i.querySelector("link")?.textContent || i.querySelector("link")?.getAttribute("href") || "";
+      
+      return normalizeItem({ title, summary: description, date_published: pubDate, url: link }, meta);
+    }).filter(i => i.title);
+  } catch(e) {
+    console.error("Erreur parsing RSS:", e);
+    return [];
+  }
 }
 
-/* ================================
-NORMALIZE & SCORING
-=============================== */
+function parseJSON(jsonText, meta) {
+  try {
+    const data = JSON.parse(jsonText);
+    if (!Array.isArray(data)) return [];
+    return data.map(i => normalizeItem({
+      title: i.title,
+      summary: i.summary || i.description,
+      date_published: i.date || i.pubDate,
+      url: i.url || i.link
+    }, meta));
+  } catch(e) {
+    console.error("Erreur parsing JSON:", e);
+    return [];
+  }
+}
+
+// ========================================
+// NORMALIZE & SCORING
+// ========================================
 function normalizeItem(raw, meta) {
-  const id = btoa((raw.url || "") + raw.title + (raw.date_published || "")).slice(0, 24);
+  const cleanHTML = (html) => (html || "").replace(/<[^>]+>/g, "").trim();
+  const id = btoa(encodeURIComponent((raw.url || "") + raw.title)).slice(0, 24);
+  
   const item = {
     id,
-    title: raw.title || "",
-    summary: (raw.summary || "").replace(/<[^>]+>/g, "").slice(0, 250),
-    content: "",
+    title: cleanHTML(raw.title) || "Sans titre",
+    summary: cleanHTML(raw.summary).slice(0, 250),
     date_published: new Date(raw.date_published || Date.now()).toISOString(),
     source_name: meta.name,
-    source_url: meta.url,
     url: raw.url || "#",
     actor: meta.actor_hint || "Other",
     category: meta.category_hint || "general",
-    tags: [],
-    importance: 0,
-    image: null
+    importance: 50
   };
-  item.importance = scoreItem(item, meta);
-  item.category = categorizeItem(item, STATE.seed.taxonomy);
+  
+  item.importance = scoreItem(item);
+  categorizeItem(item);
+  
   return item;
 }
 
@@ -378,312 +409,212 @@ function dedupeItems(items) {
   return Array.from(map.values());
 }
 
-function scoreItem(item, meta) {
+function scoreItem(item) {
   let score = 50;
   const txt = (item.title + " " + item.summary).toLowerCase();
-  if (/launch|release|api|model|partnership/.test(txt)) score += 20;
-  if (/openai|google|anthropic|mistral/.test(txt)) score += 15;
-  if (meta.tier === 1) score += 10;
+  
+  if (/launch|release|api|model|partnership|breakthrough/.test(txt)) score += 20;
+  if (/openai|google|anthropic|mistral|meta/.test(txt)) score += 15;
+  if (/gpt-5|gemini|claude/.test(txt)) score += 10;
+  
   return Math.min(score, 100);
 }
 
-function categorizeItem(item, taxonomy) {
-  for (const [cat, keywords] of Object.entries(taxonomy.categories)) {
-    for (const kw of keywords) {
-      if ((item.title + item.summary).toLowerCase().includes(kw)) {
-        item.category = cat;
-        return cat;
-      }
+function categorizeItem(item) {
+  const txt = (item.title + " " + item.summary).toLowerCase();
+  const tax = STATE.seed.taxonomy;
+  
+  // Catégorisation
+  for (const [cat, keywords] of Object.entries(tax.categories || {})) {
+    if (keywords.some(kw => txt.includes(kw.toLowerCase()))) {
+      item.category = cat;
+      break;
     }
   }
-  for (const [actor, keywords] of Object.entries(taxonomy.actors)) {
-    for (const kw of keywords) {
-      if ((item.title + item.summary).toLowerCase().includes(kw)) {
-        item.actor = actor;
-      }
+  
+  // Acteurs
+  for (const [actor, keywords] of Object.entries(tax.actors || {})) {
+    if (keywords.some(kw => txt.includes(kw.toLowerCase()))) {
+      item.actor = actor;
+      break;
     }
   }
-  return item.category;
 }
 
-/* ================================
-FILTERS & SORT
-=============================== */
+// ========================================
+// FILTERS & SORT
+// ========================================
 function applyFiltersAndSort() {
   let items = [...STATE.items];
   const q = document.getElementById("searchInput").value.toLowerCase();
-  if (q) items = items.filter(i => (i.title + i.summary + i.actor).toLowerCase().includes(q));
-  if (STATE.sort === "date") items.sort((a,b) => new Date(b.date_published) - new Date(a.date_published));
-  else items.sort((a,b) => b.importance - a.importance);
+  
+  if (q) {
+    items = items.filter(i => 
+      (i.title + i.summary + i.actor).toLowerCase().includes(q)
+    );
+  }
+  
+  if (STATE.sort === "date") {
+    items.sort((a, b) => new Date(b.date_published) - new Date(a.date_published));
+  } else {
+    items.sort((a, b) => b.importance - a.importance);
+  }
+  
   STATE.filtered = items;
 }
 
-/* ================================
-IMPORT & EXPORT
-=============================== */
+// ========================================
+// IMPORT / EXPORT
+// ========================================
 function exportJSON() {
-  const blob = new Blob([JSON.stringify(STATE.items,null,2)], {type:"application/json"});
+  const blob = new Blob([JSON.stringify(STATE.items, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "ai_dashboard_export.json";
+  a.download = `ai_dashboard_${new Date().toISOString().slice(0,10)}.json`;
   a.click();
 }
+
 function importJSON(file) {
   const reader = new FileReader();
   reader.onload = e => {
-    const data = JSON.parse(e.target.result);
-    STATE.items = dedupeItems(data);
-    saveCache();
-    renderApp();
+    try {
+      const data = JSON.parse(e.target.result);
+      STATE.items = dedupeItems(data);
+      saveCache();
+      renderApp();
+    } catch(err) {
+      alert("Fichier JSON invalide");
+    }
   };
   reader.readAsText(file);
 }
 
-/* ================================
-USER INTERACTIONS
-=============================== */
+// ========================================
+// EVENT HANDLERS
+// ========================================
 document.getElementById("refreshBtn").onclick = async () => {
+  document.getElementById("statusBar").textContent = "⏳ Rafraîchissement...";
   const live = await fetchAllSources();
   STATE.items = dedupeItems([...STATE.seed.manual_items, ...live]);
   saveCache();
   renderApp();
 };
+
 document.getElementById("sortBtn").onclick = () => {
   STATE.sort = STATE.sort === "date" ? "importance" : "date";
+  document.getElementById("sortBtn").textContent = `Tri: ${STATE.sort === "date" ? "Date" : "Importance"}`;
   renderApp();
 };
+
 document.getElementById("themeToggle").onclick = () => {
   const cur = document.documentElement.getAttribute("data-theme");
   document.documentElement.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
 };
+
 document.getElementById("exportBtn").onclick = exportJSON;
 document.getElementById("importBtn").onclick = () => document.getElementById("fileInput").click();
 document.getElementById("fileInput").onchange = e => {
   if (e.target.files[0]) importJSON(e.target.files[0]);
 };
-document.getElementById("searchInput").oninput = renderApp;
 
-</script>
+document.getElementById("searchInput").oninput = () => renderApp();
 
-<script>
-/* =========================================================
-   PART 3 / 3 — RENDU ULTRA-PREMIUM 7 SECTIONS
-========================================================= */
-
+// ========================================
+// RENDER SECTIONS
+// ========================================
 function renderApp() {
   applyFiltersAndSort();
   const app = document.getElementById("app");
   app.innerHTML = "";
-
-  // 1️⃣ Synthèse GPT — “en un trou” factuelle
-  app.appendChild(renderSectionGPT());
-
-  // 2️⃣ Commerce
-  app.appendChild(renderSectionCommerce());
-
-  // 3️⃣ GEO
-  app.appendChild(renderSectionGeo());
-
-  // 4️⃣ Media
-  app.appendChild(renderSectionMedia());
-
-  // 5️⃣ Beauty Watch
-  app.appendChild(renderSectionBeauty());
-
-  // 6️⃣ China Focus
-  app.appendChild(renderSectionChina());
-
-  // 7️⃣ Grandes annonces IA
-  app.appendChild(renderSectionGeneral());
-
-  // Mise à jour barre de statut
-  const sb = document.getElementById("statusBar");
-  sb.textContent = "Dernière mise à jour : " + (STATE.cache.fetched_at ? new Date(STATE.cache.fetched_at).toLocaleString() : "Seed");
-  sb.innerHTML += " | Sources : " + Object.entries(STATE.cache.source_status || {}).map(([k,v]) => `${k}: ${v}`).join(" | ");
+  
+  app.appendChild(renderSection("GPT / LLM (7 derniers jours)", "gpt", 7));
+  app.appendChild(renderSection("Commerce & Retail", "commerce", 30));
+  app.appendChild(renderSection("Régulation & GEO", "geo", 30));
+  app.appendChild(renderSection("Media & Publishers", "media", 30));
+  app.appendChild(renderSection("Beauty Watch", "beauty", 90));
+  app.appendChild(renderSection("China Focus", "china", 30));
+  app.appendChild(renderSection("Grandes Annonces IA", "general", 30));
+  
+  updateStatusBar();
 }
 
-/* ================================
-SECTION 1 — GPT synthèse factuelle
-=============================== */
-function renderSectionGPT() {
+function renderSection(title, category, daysBack) {
   const sec = document.createElement("section");
-  sec.innerHTML = "<h2>Synthèse GPT (7 jours)</h2>";
-
-  // Filtrer les 7 derniers jours
-  const week = Date.now() - 7*86400000;
-  const gptItems = STATE.filtered.filter(i => i.category==="gpt" && new Date(i.date_published) > week);
-
-  // Générer synthèse factuelle “en un trou”
-  const summary = document.createElement("div");
-  summary.className = "card";
-  if(gptItems.length === 0){
-    summary.textContent = "Aucune information GPT récente disponible.";
-  } else {
-    summary.innerHTML = gptItems.map(i =>
-      `<strong>${i.title}</strong> — ${i.actor}, ${new Date(i.date_published).toLocaleDateString()}`
-    ).join("<br>");
+  sec.innerHTML = `<h2>${title}</h2>`;
+  
+  const cutoff = Date.now() - (daysBack * 86400000);
+  const items = STATE.filtered.filter(i => 
+    i.category === category && new Date(i.date_published) > cutoff
+  ).slice(0, STATE.seed.ui_config.limits[category] || 15);
+  
+  if (items.length === 0) {
+    sec.innerHTML += `<div class="card">Aucune information récente disponible.</div>`;
+    return sec;
   }
-  sec.appendChild(summary);
-  return sec;
-}
-
-/* ================================
-SECTION 2 — Commerce
-=============================== */
-function renderSectionCommerce() {
-  const sec = document.createElement("section");
-  sec.innerHTML = "<h2>Commerce — Situation à date</h2>";
+  
   const grid = document.createElement("div");
   grid.className = "grid";
-
-  const commerceItems = STATE.filtered.filter(i=>i.category==="commerce");
-  const actors = [...new Set(commerceItems.map(i=>i.actor))];
-
-  actors.forEach(actor=>{
+  
+  items.forEach(i => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `<h3>${actor}</h3>`;
-    // Situation à date factuelle
-    const summary = commerceItems.filter(i=>i.actor===actor)
-      .map(i=>`- ${i.title} (${new Date(i.date_published).toLocaleDateString()})`).join("<br>");
-    card.innerHTML += `<div class="list-dense">${summary || "Aucune info"}</div>`;
+    card.innerHTML = `
+      <strong>${i.title}</strong><br>
+      <small style="color: var(--accent)">${i.actor} • ${new Date(i.date_published).toLocaleDateString('fr-FR')}</small><br>
+      <div class="list-dense" style="margin-top: 8px">${i.summary}</div>
+      ${i.url !== "#" ? `<a href="${i.url}" target="_blank" style="font-size: 11px">→ Lire plus</a>` : ""}
+    `;
     grid.appendChild(card);
   });
-
+  
   sec.appendChild(grid);
   return sec;
 }
 
-/* ================================
-SECTION 3 — GEO
-=============================== */
-function renderSectionGeo() {
-  const sec = document.createElement("section");
-  sec.innerHTML = "<h2>GEO / Régulation / Search</h2>";
-  const grid = document.createElement("div");
-  grid.className = "grid";
-
-  const geoItems = STATE.filtered.filter(i=>i.category==="geo");
-  const actors = [...new Set(geoItems.map(i=>i.actor))];
-
-  actors.forEach(actor=>{
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<h3>${actor}</h3>`;
-    const summary = geoItems.filter(i=>i.actor===actor)
-      .map(i=>`- ${i.title} (${new Date(i.date_published).toLocaleDateString()})`).join("<br>");
-    card.innerHTML += `<div class="list-dense">${summary || "Aucune info"}</div>`;
-    grid.appendChild(card);
-  });
-
-  sec.appendChild(grid);
-  return sec;
+function updateStatusBar() {
+  const sb = document.getElementById("statusBar");
+  const fetchDate = STATE.cache.fetched_at 
+    ? new Date(STATE.cache.fetched_at).toLocaleString('fr-FR')
+    : "Jamais";
+  
+  const sources = Object.entries(STATE.cache.source_status || {})
+    .map(([k, v]) => `${k}: ${v}`)
+    .join(" | ");
+  
+  sb.innerHTML = `📊 ${STATE.items.length} articles | Dernière MAJ: ${fetchDate}${sources ? " | " + sources : ""}`;
 }
 
-/* ================================
-SECTION 4 — Media
-=============================== */
-function renderSectionMedia() {
-  const sec = document.createElement("section");
-  sec.innerHTML = "<h2>Media / Publisher / Ads</h2>";
-  const grid = document.createElement("div");
-  grid.className = "grid";
-
-  const mediaItems = STATE.filtered.filter(i=>i.category==="media");
-  mediaItems.forEach(i=>{
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<h3>${i.actor}</h3><strong>${i.title}</strong><br>${i.summary}`;
-    grid.appendChild(card);
-  });
-
-  sec.appendChild(grid);
-  return sec;
-}
-
-/* ================================
-SECTION 5 — Beauty Watch
-=============================== */
-function renderSectionBeauty() {
-  const sec = document.createElement("section");
-  sec.innerHTML = "<h2>Beauty Watch (90 jours)</h2>";
-  const grid = document.createElement("div");
-  grid.className = "grid";
-
-  const beautyItems = STATE.filtered.filter(i=>i.category==="beauty");
-  beautyItems.forEach(i=>{
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<strong>${i.title}</strong><br>${i.actor}<br>${i.summary}`;
-    grid.appendChild(card);
-  });
-
-  sec.appendChild(grid);
-  return sec;
-}
-
-/* ================================
-SECTION 6 — China Focus
-=============================== */
-function renderSectionChina() {
-  const sec = document.createElement("section");
-  sec.innerHTML = "<h2>China Focus</h2>";
-  const grid = document.createElement("div");
-  grid.className = "grid";
-
-  const chinaItems = STATE.filtered.filter(i=>i.category==="china");
-  chinaItems.forEach(i=>{
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<strong>${i.title}</strong><br>${i.actor}<br>${i.summary}`;
-    grid.appendChild(card);
-  });
-
-  sec.appendChild(grid);
-  return sec;
-}
-
-/* ================================
-SECTION 7 — Grandes annonces IA
-=============================== */
-function renderSectionGeneral() {
-  const sec = document.createElement("section");
-  sec.innerHTML = "<h2>Grandes annonces IA</h2>";
-  const grid = document.createElement("div");
-  grid.className = "grid";
-
-  const generalItems = STATE.filtered.filter(i=>i.category==="general")
-    .slice(0, STATE.seed.ui_config.limits.general);
-  generalItems.forEach(i=>{
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<div class="image"></div><strong>${i.title}</strong><br>${i.summary}`;
-    grid.appendChild(card);
-  });
-
-  sec.appendChild(grid);
-  return sec;
-}
-
-/* ================================
-INITIALIZATION
-=============================== */
+// ========================================
+// INITIALIZATION
+// ========================================
 window.addEventListener("load", async () => {
   loadSeedData();
   loadCache();
-  // Démarrage avec manual_items
-  STATE.items = STATE.seed.manual_items.slice();
-  renderApp();
-
-  // Tentative live fetch
+  
+  // Affichage initial du cache
+  if (STATE.items.length > 0) {
+    renderApp();
+  }
+  
+  // Fetch automatique au démarrage
   try {
     const live = await fetchAllSources();
     STATE.items = dedupeItems([...STATE.seed.manual_items, ...live]);
     saveCache();
     renderApp();
-  } catch(e){
-    document.getElementById("statusBar").textContent = "Live fetch indisponible — affichage cache/seed";
-    console.warn(e);
+  } catch(e) {
+    console.warn("Erreur fetch live:", e);
+    if (STATE.items.length === 0) {
+      document.getElementById("app").innerHTML = `
+        <div class="card" style="text-align: center; padding: 40px">
+          <h3>⚠️ Impossible de charger les flux RSS</h3>
+          <p>Vérifiez votre connexion internet ou réessayez plus tard.</p>
+        </div>
+      `;
+    }
   }
 });
 </script>
+
+</body>
+</html>
